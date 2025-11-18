@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const changeTextBtn = document.getElementById("changeTextBtn");
     const addItemBtn = document.getElementById("addItemBtn");
     const qaList = document.querySelector("#qaList");
+    const toggleListBtn = document.getElementById("toggleListBtn");
 
     const colors = ["#A3D9FF", "#FFB6C1", "#B19CD9", "#A0E7E5"];
     const messages = [
@@ -16,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Change background color
     changeColorBtn.addEventListener("click", () => {
         const randomColor = colors[Math.floor(Math.random() * colors.length)];
-        document.body.style.backgroundColor = randomColor;git
+        document.body.style.backgroundColor = randomColor;
     });
 
     //Change paragraph text
@@ -30,5 +31,14 @@ document.addEventListener("DOMContentLoaded", () => {
         const newItem = document.createElement("li");
         newItem.textContent = "New QA Skill Added!";
         qaList.appendChild(newItem);
+    });
+
+        // Toggle list visiblity -added this function
+        toggleListBtn.addEventListener("click", () => {  
+            if (qaList.style.display === "none") {
+                qaList.style.display = "block";
+            }   else {
+                qaList.style.display = "none"
+            }
     });
 });
