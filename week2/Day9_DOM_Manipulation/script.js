@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Change background color
     changeColorBtn.addEventListener("click", () => {
         const randomColor = colors[Math.floor(Math.random() * colors.length)];
-        document.body.style.backgroundColor = randomColor;
+        document.body.style.backgroundColor = randomColor;git
     });
 
     //Change paragraph text
